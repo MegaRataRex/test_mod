@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "xdmod:item/stronger_than_you_disc"
+  }
+}

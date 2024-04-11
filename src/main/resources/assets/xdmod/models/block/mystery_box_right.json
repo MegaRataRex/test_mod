@@ -1,0 +1,9 @@
+{
+  "render_type": "minecraft:cutout",
+  "visible": false ,
+  "textures": {
+    "particle": "minecraft:block/oak_planks"
+  }
+
+
+}

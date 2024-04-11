@@ -1,0 +1,39 @@
+[19mar.2024 00:38:49.669] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\santy\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.2.19, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, xdmod, --all, --output, C:\Users\santy\Downloads\cosas de mc\forge-1.20.1-47.2.19-mdk\src\generated\resources, --existing, C:\Users\santy\Downloads\cosas de mc\forge-1.20.1-47.2.19-mdk\src\main\resources, --mixin.config, mixins.xdmod.json]
+[19mar.2024 00:38:49.675] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.7 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[19mar.2024 00:38:49.797] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[19mar.2024 00:38:49.873] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/santy/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[19mar.2024 00:38:50.250] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\santy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.2.19\99f54fe7798c97a9a6e7c962ef94f7d30610122d\javafmllanguage-1.20.1-47.2.19.jar is missing mods.toml file
+[19mar.2024 00:38:50.255] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\santy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.2.19\1b32b3f27357ab558a098c1c20e1494558a71b31\lowcodelanguage-1.20.1-47.2.19.jar is missing mods.toml file
+[19mar.2024 00:38:50.259] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\santy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.2.19\2eb26ae9afdd5709b9ee9bdf90b9486212a676af\mclanguage-1.20.1-47.2.19.jar is missing mods.toml file
+[19mar.2024 00:38:50.264] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\santy\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.2.19\7cd28cc091d07bbe6a4f51bf9728ccbc27bfc4fc\fmlcore-1.20.1-47.2.19.jar is missing mods.toml file
+[19mar.2024 00:38:50.419] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[19mar.2024 00:38:51.793] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by mixins.xdmod.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[19mar.2024 00:38:51.793] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[19mar.2024 00:38:51.793] [main/ERROR] [mixin/]: Mixin config mixins.xdmod.json does not specify "minVersion" property
+[19mar.2024 00:38:51.800] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\santy\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, xdmod, --all, --output, C:\Users\santy\Downloads\cosas de mc\forge-1.20.1-47.2.19-mdk\src\generated\resources, --existing, C:\Users\santy\Downloads\cosas de mc\forge-1.20.1-47.2.19-mdk\src\main\resources]
+[19mar.2024 00:38:51.870] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[19mar.2024 00:38:51.872] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[19mar.2024 00:38:51.878] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[19mar.2024 00:38:51.878] [main/INFO] [mixin/]: Selecting config mixins.xdmod.json
+[19mar.2024 00:38:51.882] [main/WARN] [mixin/]: Reference map 'xdmod.mixin.refmap.json' for mixins.xdmod.json could not be read. If this is a development environment you can ignore this message
+[19mar.2024 00:38:51.883] [main/INFO] [mixin/]: Selecting config geckolib.mixins.json
+[19mar.2024 00:38:52.224] [main/INFO] [mixin/]: Remapping refMap geckolib.refmap.json using C:\Users\santy\Downloads\cosas de mc\forge-1.20.1-47.2.19-mdk\build\createSrgToMcp\output.srg
+[19mar.2024 00:38:52.224] [main/INFO] [mixin/]: Preparing mixins.xdmod.json (0)
+[19mar.2024 00:38:52.225] [main/INFO] [mixin/]: Preparing geckolib.mixins.json (1)
+[19mar.2024 00:38:52.604] [main/INFO] [mixin/]: Prepared 1 mixins in 0.726 sec (726.0ms avg) (0ms load, 0ms transform, 0ms plugin)
+[19mar.2024 00:38:52.917] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [xdmod]
+[19mar.2024 00:38:57.155] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.2.19, for MC 1.20.1 with MCP 20230612.114412
+[19mar.2024 00:38:57.160] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.2.19 Initialized
+[19mar.2024 00:38:57.227] [modloading-worker-0/WARN] [software.bernie.geckolib.GeckoLib/]: Minecraft.getInstance() was null, could not register reload listeners
+[19mar.2024 00:38:58.152] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/santy/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[19mar.2024 00:38:58.153] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/santy/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.2.19_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[19mar.2024 00:38:58.354] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: xdmod
+[19mar.2024 00:38:58.369] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: xdmod finished after 14 ms
+[19mar.2024 00:38:58.370] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: xdmod
+[19mar.2024 00:38:58.370] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: xdmod finished after 0 ms
+[19mar.2024 00:38:58.370] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id xdmod
+[19mar.2024 00:38:58.476] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id xdmod finished after 106 ms
+[19mar.2024 00:38:58.477] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id xdmod
+[19mar.2024 00:38:58.487] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id xdmod finished after 10 ms
+[19mar.2024 00:38:58.488] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 133 ms
+[19mar.2024 00:38:58.491] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 6, old count: 6, new count: 7, removed stale: 0, written: 0

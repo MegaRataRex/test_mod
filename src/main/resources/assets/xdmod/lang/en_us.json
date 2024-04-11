@@ -1,0 +1,31 @@
+{
+  "item.xdmod.weezer": "weezer",
+  "item.xdmod.weezer.desc": "Weezer - Buddy Holly (1994)",
+  "item.xdmod.go_flow_disc": "Queens of The Stone Age",
+  "item.xdmod.go_flow_disc.desc": "Queens of The Stone Age - Go With The Flow (2002)",
+  "item.xdmod.stronger_than_you_disc": "???",
+  "item.xdmod.stronger_than_you_disc.desc": "Rola Sorpresa",
+  "item.xdmod.ray_gun": "Ray Gun",
+  "item.xdmod.element_115": "Element 115",
+  "item.xdmod.phd_slider_bottle": "PHD Slider Perk Bottle",
+  "item.xdmod.perk_bottle": "Perk Bottle",
+
+
+  "block.xdmod.element_115_ore": "Element 115 Ore",
+  "block.xdmod.element_115_deepslate_ore": "Element 115 Deepslate Ore",
+  "block.xdmod.mystery_box": "Mystery Box",
+  "creativetab.tutorial_tab": "Songs",
+
+  "sounds.xdmod.mystery_box_open": "Mystery Box opens",
+  "sounds.xdmod.mystery_box_spin": "Mystery Box spinning",
+  "sounds.xdmod.ray_gun_shoot": "Ray Gun shoots",
+
+
+
+  "effect.xdmod.phd": "PHD Slider"
+
+
+
+
+
+}

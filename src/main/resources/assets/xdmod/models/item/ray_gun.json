@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "xdmod:item/ray_gun_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "xdmod:item/ray_gun_2d"
+    },
+    "ground": {
+      "parent": "xdmod:item/ray_gun_3d"
+    },
+    "fixed": {
+      "parent": "xdmod:item/ray_gun_2d"
+    }
+  }
+}

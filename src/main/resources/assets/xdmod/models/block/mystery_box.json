@@ -1,0 +1,10 @@
+{
+  "parent": "builtin/entity",
+  "textures": {
+    "particle": "minecraft:block/oak_planks"
+  },
+  "texture_size": [
+    128,
+    128
+  ]
+}

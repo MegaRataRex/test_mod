@@ -1,0 +1,57 @@
+{
+  "buddy_holly": {
+    "sounds": [
+      {
+        "name": "xdmod:buddy_holly",
+        "stream": true
+      }
+    ]
+  },
+  "go_flow" : {
+    "sounds": [
+      {
+        "name": "xdmod:go_flow",
+        "stream": true
+      }
+    ]
+  },
+  "stronger_than_you": {
+    "sounds": [
+      {
+        "name": "xdmod:stronger_than_you",
+        "stream": true
+      }
+    ]
+  },
+  "ray_gun_shoot_sound": {
+    "subtitle": "sounds.xdmod.ray_gun_shoot",
+    "sounds": [
+      {
+        "name": "xdmod:ray_gun_shoot_sound"
+      }
+    ]
+  },
+  "ray_gun_beam": {
+    "sounds": [
+      {
+        "name": "xdmod:ray_gun_beam"
+      }
+    ]
+  },
+  "mystery_box_open": {
+    "subtitle": "sounds.xdmod.mystery_box_open",
+    "sounds": [
+      {
+        "name": "xdmod:mystery_box_open"
+      }
+    ]
+  },
+  "mystery_box_spin": {
+    "subtitle": "sounds.xdmod.mystery_box_spin",
+    "sounds": [
+      {
+        "name": "xdmod:mystery_box_spin"
+      }
+    ]
+  }
+}
