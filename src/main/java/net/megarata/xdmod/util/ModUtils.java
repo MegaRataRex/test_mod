@@ -5,12 +5,15 @@ import com.google.common.collect.ImmutableMap;
 import net.megarata.xdmod.block.custom.MysteryBoxBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageSources;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.PrimedTnt;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.ProtectionEnchantment;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Explosion;
@@ -30,7 +33,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ModUtils {
-
     static Logger logger = LogManager.getLogger();
     public static ImmutableMap<BlockState, VoxelShape> generateShapeForEach(ImmutableList<BlockState> states) {
         ImmutableMap.Builder<BlockState, VoxelShape> builder = new ImmutableMap.Builder<>();
@@ -92,17 +94,19 @@ public class ModUtils {
                 break;
         }
         return blockPosList;
+
     }
 
     public static List<Entity> getEntitiesInRadius(Level world, double x, double y, double z, double radius) {
         AABB boundingBox = new AABB(x - radius, y - radius, z - radius, x + radius, y + radius, z + radius);
-        List<Entity> nearbyEntities = world.getEntities(null,boundingBox);
-        return nearbyEntities;
+        return world.getEntities(null,boundingBox);
     }
 
     public static void doCustomExplosionDamage(Vec3 vec3, double radius, Entity entity, @Nullable Entity causingEntity, double amount){
         double normalizedVector = Math.sqrt(entity.distanceToSqr(vec3))/ radius;
-        logger.debug(normalizedVector);
+        if(entity instanceof Player player){
+            player.displayClientMessage(Component.literal(Double.toString(normalizedVector)),true);
+        }
         if(normalizedVector<=1.00){
             double dx = entity.getX() - vec3.get(Direction.Axis.X);
             double dy = (entity instanceof PrimedTnt ? entity.getY() : entity.getEyeY())-vec3.get(Direction.Axis.Y);
@@ -113,43 +117,22 @@ public class ModUtils {
                 dx/=distanceSquared;
                 dy/=distanceSquared;
                 dz/=distanceSquared;
-                double seen = getSeenPercent(vec3,entity);
-                logger.debug(seen);
-                double dmgMultiplier = (1.0-Mth.clamp(normalizedVector,0,0.6)) * seen;;
-                double damage = amount * dmgMultiplier;
-                logger.debug(damage);
                 double knockback;
-                entity.hurt(entity.damageSources().explosion(causingEntity,causingEntity),(float) damage);
+                entity.hurt(entity.damageSources().explosion(causingEntity,causingEntity),(float) amount);
                 if (entity instanceof LivingEntity livingEntity) {
-                    knockback = ProtectionEnchantment.getExplosionKnockbackAfterDampener(livingEntity,dmgMultiplier);
+                    knockback = ProtectionEnchantment.getExplosionKnockbackAfterDampener(livingEntity,amount);
                     logger.debug(knockback);
                 } else {
-                    knockback = dmgMultiplier;
+                    knockback = amount;
                 }
                 dx *= knockback;
                 dy *= knockback;
                 dz *= knockback;
                 Vec3 vec31 = new Vec3(dx,dy,dz);
                 logger.debug(vec31);
-                entity.setDeltaMovement(entity.getDeltaMovement().add(vec31));
+                entity.getDeltaMovement().add(vec31);
             }
         }
     }
 
-    private static double getSeenPercent(Vec3 vec3, Entity entity){
-        Vec3 entityPos = new Vec3(entity.getX(),entity.getY(),entity.getZ());
-        Vec3 direction = entityPos.subtract(vec3).normalize();
-
-        ClipContext clipContext = new ClipContext(vec3,entityPos, ClipContext.Block.COLLIDER, ClipContext.Fluid.NONE,entity);
-
-        BlockHitResult result = entity.level().clip(clipContext);
-
-        if(result.getType() == HitResult.Type.BLOCK){
-            double distance = vec3.distanceTo(entityPos);
-            double distanceObstacle = vec3.distanceTo(result.getLocation());
-            double percent = distanceObstacle / distance;
-            return  Math.min(1.0,Math.max(0.0,1.0-percent));
-        }
-        return 1.0;
-    }
 }

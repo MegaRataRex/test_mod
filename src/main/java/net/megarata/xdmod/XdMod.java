@@ -1,17 +1,25 @@
 package net.megarata.xdmod;
 
 import com.mojang.logging.LogUtils;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationFactory;
 import net.megarata.xdmod.block.ModBlocks;
 import net.megarata.xdmod.block.entity.ModBlockEntities;
+import net.megarata.xdmod.client.anim.AnimationRegistry;
 import net.megarata.xdmod.effect.ModEffects;
 import net.megarata.xdmod.entity.ModEntities;
 import net.megarata.xdmod.entity.client.MysteryBoxRenderer;
 import net.megarata.xdmod.entity.client.RayGunProjectileRenderer;
+import net.megarata.xdmod.network.ModMessages;
 import net.megarata.xdmod.particle.ModParticles;
 import net.megarata.xdmod.sound.ModSounds;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.HumanoidModel;
+import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -62,6 +70,7 @@ public class XdMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        ModMessages.registerMessages();
     }
 
     // Add the example block item to the building blocks tab
@@ -83,7 +92,7 @@ public class XdMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            AnimationRegistry.load(Minecraft.getInstance().getResourceManager());
             EntityRenderers.register(ModEntities.RAY_GUN_PROJECTILE.get(), RayGunProjectileRenderer::new);
             BlockEntityRenderers.register(ModBlockEntities.MYSTERY_BOX_BE.get(), MysteryBoxRenderer::new);
             event.enqueueWork(() -> {
@@ -101,4 +110,5 @@ public class XdMod
             });
         }
     }
+
 }
