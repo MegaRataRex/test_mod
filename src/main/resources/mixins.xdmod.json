@@ -5,5 +5,13 @@
   "refmap": "xdmod.mixin.refmap.json",
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "client": [
+    "AbstractClientPlayerMixin",
+    "EntityMixin"
+  ],
+  "mixins": [
+    "LocalPlayerMixin",
+    "PlayerMixin"
+  ]
 }
